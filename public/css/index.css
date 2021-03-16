@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  background: #fff;
+  line-height: 20px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #006d77;
+}
+
+#signin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#signin #wrap {
+  margin: 0 20px;
+}
+#signin #wrap form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 300px;
+}
+#signin #wrap form label {
+  background: #f8f8ff;
+  margin: 20px 0 0 0;
+  padding: 10px 15px 0 15px;
+  font-weight: bold;
+}
+#signin #wrap form input {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 15px 15px 15px;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+  background: #f8f8ff;
+}
+#signin #wrap form button {
+  margin: 40px 0 0 0;
+  padding: 15px;
+  background: #006d77;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  #signin #wrap form {
+    width: 250px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

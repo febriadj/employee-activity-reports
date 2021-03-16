@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$font-body: 'Roboto', sans-serif;
+
+* { padding: 0; margin: 0; }
+body { font-family: $font-body; font-size: 13px; background: #fff; line-height: 20px; }
+
+.link { color: #000; text-decoration: none; }
+.link:hover { color: #006d77; }
+
+#output {
+  width: 100%; display: flex; justify-content: center;
+  padding: 40px 0;
+  #wrap {
+    width: 1224px; margin: 0 20px;
+    display: flex; overflow-x: scroll;
+    padding: 0 0 10px 0;
+    table {
+      flex: none; width: 100%;
+      .header { 
+        background: #343a40; color: #fff;
+        td { border: 1px solid #343a40; }
+      }
+      td { padding: 15px; text-align: center; border: 1px solid #ddd; resize: none; }
+      .nomer { width: 10px; min-width: 10px; } 
+      .waktu { width: 180px; min-width: 180px; } 
+      .pelatih { width: 100px; min-width: 100px; }
+      .personil { width: 100px; min-width: 100px; } 
+      .materi { width: 250px; min-width: 250px; }
+      .list:nth-child(even) { background: #f8f8ff; }
+      .aksi {
+        width: 10px; min-width: 10px; text-align: center;
+        .aksi-wrap {
+          display: flex; justify-content: center; align-items: center;
+          .link-aksi { 
+            width: 30px; height: 30px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            background: #006d77; text-decoration: none; color: #fff; }
+          .link-aksi:hover { background: #F07167; }
+        }
+      }
+    }
+  }
+  #wrap::-webkit-scrollbar { height: 10px }
+  #wrap::-webkit-scrollbar-thumb { background: #ddd; border-radius: 20px; }
+}
+
+#formulir {
+  width: 100%;
+  display: flex; justify-content: center;
+  padding: 40px 0;
+  #wrap {
+    width: 1224px; margin: 0 20px;
+    display: flex; justify-content: flex-start;
+    form {
+      display: flex; flex-direction: column;
+      width: 400px;
+      label { background: #f8f8ff; margin: 10px 0 0 0; padding: 10px 15px 5px 15px; font-weight: bold; }
+      .input { 
+        outline: none;
+        padding: 10px 15px 15px 15px;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #999;
+        background: #f8f8ff;
+        font-family: $font-body;
+      }
+      .submit { padding: 15px; outline: none; border-radius: 0; margin: 40px 0 0 0; border: none; background: #006d77; color: #fff; }
+    }
+  }
+}
+
+
+@media screen and ( max-width: 600px ) {
+  body { font-size: 12px; }
+}
+
+@media screen and ( max-width: 500px ) {
+  #formulir {
+    #wrap {
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

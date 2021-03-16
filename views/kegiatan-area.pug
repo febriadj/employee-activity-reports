@@ -1,0 +1,66 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/kegiatan-area.css")
+    title Laporans - Kegiatan Area
+  body 
+    include partials/navbar.pug
+    #output 
+      #wrap 
+        table.table
+          tr.header
+            td.no No
+            td.tanggal Hari & Tanggal
+            td.vendor Vendor
+            td.waktu Waktu
+            td.kegiatan Kegiatan
+            td.lokasi Lokasi
+            td.petugas Petugas
+            td.dokumentasi Dokumentasi
+            td.aksi Hapus
+          - result.map( (list, index) => {
+          tr.list 
+            td.no #{ index + 1 }
+            td.tanggal #{ list.tanggal.toLocaleDateString('id', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' }) }
+            td.vendor #{ list.vendor }
+            td.waktu #{ list.waktu }
+            td.kegiatan #{ list.kegiatan }
+            td.lokasi #{ list.lokasi }
+            td.petugas #{ list.petugas }
+            td.dokumentasi #{ list.aktifitas } 
+            td.td.aksi
+              .aksi-wrap
+                a(href="/kegiatan-area?del=" + list._id class="link-aksi")
+                  i.fas.fa-times
+          - })
+
+    #formulir
+      #wrap 
+        form(action="/kegiatan-area", method="post")
+          label(for="tanggal") Hari & Tanggal 
+          input(type="date", name="tanggal")
+          .aktifitas 
+            <label class="container">Tidak Ada Aktifitas
+              <input type="checkbox" name="aktifitas">
+              <span class="checkmark"></span>
+            </label>
+          .note 
+            span Informasi
+            p tidak perlu mengisi formulir selanjutnya jika tidak ada aktifitas.
+          
+          label(for="vendor") Vendor 
+          input(type="text", name="vendor" placeholder="Masukan Vendor")
+          label(for="waktu") Waktu 
+          input(type="text" name="waktu" placeholder="Masukan Waktu")
+          label(for="kegiatan") Kegiatan
+          textarea(name="kegiatan" placeholder="Masukan Keterangan Kegiatan")
+          label(for="lokasi") Lokasi
+          input(type="text", name="lokasi" placeholder="Masukan Lokasi")  
+          label(for="petugas") Petugas
+          input(type="text", name="petugas" placeholder="Masukan Nama Petugas")
+          button(type="submit") Tambah Data
+    
+    include partials/footer.pug

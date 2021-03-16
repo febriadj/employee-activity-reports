@@ -1,0 +1,31 @@
+link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous")
+link(rel="stylesheet" href="/partials.css")
+
+#navbar
+  #wrap
+    img(src="logo.png" alt="" class="logo")
+    .path
+      a(href="/" class="link") HALAMAN AWAL
+      a(href="/matrix" class="link") SKILL MATRIX
+      a(href="/kegiatan-area" class="link") KEGIATAN AREA
+      a(href="/dpcl" class="link") DPCL
+      a(href="/logout" class="link logout") KELUAR 
+
+#navmob
+  #wrap
+    img(src="logo.png" alt="" class="logo")
+    .icon 
+      - for ( let i = 1; i <= 4; i++ ) {
+          span(class="strip strip-" + i)
+      - }
+
+#menu
+  #wrap
+    a(href="/" class="link") HALAMAN AWAL
+    a(href="/matrix" class="link") SKILL MATRIX
+    a(href="/kegiatan-area" class="link") KEGIATAN AREA
+    a(href="/dpcl" class="link") DPCL
+    span
+    a(href="/logout" class="link logout") KELUAR 
+
+script(src="partials.js") 

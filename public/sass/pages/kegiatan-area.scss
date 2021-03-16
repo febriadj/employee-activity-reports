@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$font-body: 'Roboto', sans-serif;
+
+* { padding: 0; margin: 0; }
+body { font-family: $font-body; font-size: 13px; background: #fff; line-height: 20px; }
+
+.link { color: #000; text-decoration: none; }
+.link:hover { color: #006d77; }
+
+#output {
+  width: 100%; display: flex; justify-content: center;
+  padding: 40px 0;
+  #wrap {
+    width: 1224px; margin: 0 20px;
+    padding: 0 0 10px 0;
+    display: flex; overflow-x: auto;
+    table {
+      width: 100%;
+      .header {
+        background: #343a40; color: #fff;
+        td { border: 1px solid #343a40; }
+      }
+      td { padding: 15px; text-align: center; border: 1px solid #ddd; resize: none; }
+      .no { width: 10px; min-width: 20px; }
+      .tanggal { width: 180px; min-width: 180px; }
+      .vendor { width: 180px; min-width: 180px; }
+      .waktu { width: 80px; min-width: 80px; }
+      .kegiatan { width: 400px; min-width: 400px; }
+      .lokasi { width: 80px; min-width: 80px; }
+      .petugas { width: 100px; min-width: 100px; }
+      .dokumentasi { width: 150px; min-width: 150px; }
+      .list:nth-child(even) { background: #f8f8ff; }
+      .aksi {
+        width: 10px; min-width: 10px; text-align: center;
+        .aksi-wrap {
+          display: flex; justify-content: center; align-items: center;
+          .link-aksi { 
+            width: 30px; height: 30px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            background: #006d77; text-decoration: none; color: #fff; }
+          .link-aksi:hover { background: #F07167; }
+        }
+      }
+    }
+  }
+  #wrap::-webkit-scrollbar { height: 10px }
+  #wrap::-webkit-scrollbar-thumb { background: #ddd; border-radius: 20px; }
+}
+
+#formulir {
+  width: 100%;
+  display: flex; justify-content: center;
+  padding: 40px 0;
+  #wrap {
+    margin: 0 20px;
+    width: 1224px;
+    display: flex;
+    form {
+      width: 400px;
+      display: grid; grid-template-columns: 1fr;
+      label {
+        margin: 10px 0 0 0;
+        padding: 10px 15px 5px 15px;
+        background: #f8f8ff;
+        font-weight: bold;
+      }
+      input, textarea {
+        border: none; border-radius: 0; outline: none;
+        padding: 10px 15px 20px 15px;
+        border-bottom: 1px solid #999;
+        background: #f8f8ff;
+        font-family: $font-body;
+      }
+      button { padding: 15px; background: #006d77; color: #fff; outline: none; border: none; border-radius: 0; margin: 40px 0 0 0; }
+      textarea { resize: none; height: 50px; }
+      .aktifitas {
+        display: flex; align-items: center;
+        position: relative;
+        label {
+          padding: 20px 20px 20px 40px;
+          border-bottom: 1px solid #999;
+        }
+        label input:checked ~ .checkmark { background: #006d77; }
+        .checkmark { 
+          position: absolute; left: 0;
+          border: 1px solid #343a40; 
+          width: 20px; height: 20px;
+          border-radius: 50%;
+          transform: translateX(10px);
+        }
+        input { display: none; }          
+      }
+      .note { 
+        margin: 10px 0; display: flex; align-items: flex-start;
+        span { border-bottom: 1px solid #343a40; margin: 0 10px 0 0; }
+      }
+    }
+  }
+}
+
+@media screen and ( max-width: 600px ) {
+  body { font-size: 12px; }
+
+  #formulir {
+    #wrap {
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

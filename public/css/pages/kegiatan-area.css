@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  background: #fff;
+  line-height: 20px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #006d77;
+}
+
+#output {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+#output #wrap {
+  width: 1224px;
+  margin: 0 20px;
+  padding: 0 0 10px 0;
+  display: flex;
+  overflow-x: auto;
+}
+#output #wrap table {
+  width: 100%;
+}
+#output #wrap table .header {
+  background: #343a40;
+  color: #fff;
+}
+#output #wrap table .header td {
+  border: 1px solid #343a40;
+}
+#output #wrap table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  resize: none;
+}
+#output #wrap table .no {
+  width: 10px;
+  min-width: 20px;
+}
+#output #wrap table .tanggal {
+  width: 180px;
+  min-width: 180px;
+}
+#output #wrap table .vendor {
+  width: 180px;
+  min-width: 180px;
+}
+#output #wrap table .waktu {
+  width: 80px;
+  min-width: 80px;
+}
+#output #wrap table .kegiatan {
+  width: 400px;
+  min-width: 400px;
+}
+#output #wrap table .lokasi {
+  width: 80px;
+  min-width: 80px;
+}
+#output #wrap table .petugas {
+  width: 100px;
+  min-width: 100px;
+}
+#output #wrap table .dokumentasi {
+  width: 150px;
+  min-width: 150px;
+}
+#output #wrap table .list:nth-child(even) {
+  background: #f8f8ff;
+}
+#output #wrap table .aksi {
+  width: 10px;
+  min-width: 10px;
+  text-align: center;
+}
+#output #wrap table .aksi .aksi-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#output #wrap table .aksi .aksi-wrap .link-aksi {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #006d77;
+  text-decoration: none;
+  color: #fff;
+}
+#output #wrap table .aksi .aksi-wrap .link-aksi:hover {
+  background: #F07167;
+}
+#output #wrap::-webkit-scrollbar {
+  height: 10px;
+}
+#output #wrap::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+#formulir {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+#formulir #wrap {
+  margin: 0 20px;
+  width: 1224px;
+  display: flex;
+}
+#formulir #wrap form {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#formulir #wrap form label {
+  margin: 10px 0 0 0;
+  padding: 10px 15px 5px 15px;
+  background: #f8f8ff;
+  font-weight: bold;
+}
+#formulir #wrap form input, #formulir #wrap form textarea {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  padding: 10px 15px 20px 15px;
+  border-bottom: 1px solid #999;
+  background: #f8f8ff;
+  font-family: "Roboto", sans-serif;
+}
+#formulir #wrap form button {
+  padding: 15px;
+  background: #006d77;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  margin: 40px 0 0 0;
+}
+#formulir #wrap form textarea {
+  resize: none;
+  height: 50px;
+}
+#formulir #wrap form .aktifitas {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#formulir #wrap form .aktifitas label {
+  padding: 20px 20px 20px 40px;
+  border-bottom: 1px solid #999;
+}
+#formulir #wrap form .aktifitas label input:checked ~ .checkmark {
+  background: #006d77;
+}
+#formulir #wrap form .aktifitas .checkmark {
+  position: absolute;
+  left: 0;
+  border: 1px solid #343a40;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateX(10px);
+}
+#formulir #wrap form .aktifitas input {
+  display: none;
+}
+#formulir #wrap form .note {
+  margin: 10px 0;
+  display: flex;
+  align-items: flex-start;
+}
+#formulir #wrap form .note span {
+  border-bottom: 1px solid #343a40;
+  margin: 0 10px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  #formulir #wrap form {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=kegiatan-area.css.map */

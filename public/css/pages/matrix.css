@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  background: #fff;
+  line-height: 20px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #006d77;
+}
+
+#output {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+#output #wrap {
+  width: 1224px;
+  margin: 0 20px;
+  display: flex;
+  overflow-x: scroll;
+  padding: 0 0 10px 0;
+}
+#output #wrap table {
+  flex: none;
+  width: 100%;
+}
+#output #wrap table .header {
+  background: #343a40;
+  color: #fff;
+}
+#output #wrap table .header td {
+  border: 1px solid #343a40;
+}
+#output #wrap table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  resize: none;
+}
+#output #wrap table .nomer {
+  width: 10px;
+  min-width: 10px;
+}
+#output #wrap table .waktu {
+  width: 180px;
+  min-width: 180px;
+}
+#output #wrap table .pelatih {
+  width: 100px;
+  min-width: 100px;
+}
+#output #wrap table .personil {
+  width: 100px;
+  min-width: 100px;
+}
+#output #wrap table .materi {
+  width: 250px;
+  min-width: 250px;
+}
+#output #wrap table .list:nth-child(even) {
+  background: #f8f8ff;
+}
+#output #wrap table .aksi {
+  width: 10px;
+  min-width: 10px;
+  text-align: center;
+}
+#output #wrap table .aksi .aksi-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#output #wrap table .aksi .aksi-wrap .link-aksi {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #006d77;
+  text-decoration: none;
+  color: #fff;
+}
+#output #wrap table .aksi .aksi-wrap .link-aksi:hover {
+  background: #F07167;
+}
+#output #wrap::-webkit-scrollbar {
+  height: 10px;
+}
+#output #wrap::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 20px;
+}
+
+#formulir {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+#formulir #wrap {
+  width: 1224px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+#formulir #wrap form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+#formulir #wrap form label {
+  background: #f8f8ff;
+  margin: 10px 0 0 0;
+  padding: 10px 15px 5px 15px;
+  font-weight: bold;
+}
+#formulir #wrap form .input {
+  outline: none;
+  padding: 10px 15px 15px 15px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #999;
+  background: #f8f8ff;
+  font-family: "Roboto", sans-serif;
+}
+#formulir #wrap form .submit {
+  padding: 15px;
+  outline: none;
+  border-radius: 0;
+  margin: 40px 0 0 0;
+  border: none;
+  background: #006d77;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #formulir #wrap form {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=matrix.css.map */

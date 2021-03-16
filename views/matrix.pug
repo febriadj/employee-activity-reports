@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="matrix.css")
+    title Laporans - Matrix
+  body
+    include partials/navbar.pug
+    #output
+      #wrap
+        table
+          tr.header
+            td.nomer No
+            td.waktu Waktu 
+            td.pelatih Pelatih 
+            td.personil Jumlah Personil 
+            td.materi Materi Kegiatan
+            td.aksi Hapus
+          - matrixs.map( (result, index) => {
+          tr.list 
+            td.nomer #{ index + 1 }
+            td.waktu #{ result.waktu.toLocaleDateString('id', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' }) }
+            td.pelatih #{ result.pelatih }
+            td.personil #{ result.personil } Orang
+            td.materi #{ result.materi }
+            td.aksi
+              .aksi-wrap
+                a(href="/matrix?del=" + result._id class="link-aksi")
+                  i.fas.fa-times
+          - })
+
+    #formulir 
+      #wrap
+        form(action="", method="post" id="form-submit")
+          label(for="waktu") Waktu 
+          input(type="date", name="waktu" class="input date" required)
+          label(for="pelatih") Nama Pelatih 
+          input(type="text", name="pelatih" class="input pelatih" placeholder="Masukan Nama Pelatih" required)
+          label(for="personil") Jumlah Personil 
+          input(type="number", name="personil" class="input personil" placeholder="Masukan Jumlah Personil" required)
+          label(for="materi") Materi Kegiatan 
+          input(type="text", name="materi" class="input materi" placeholder="Masukan Materi Kegiatan" required)
+          button(type="submit" class="submit") Tambah Data        
+
+    include partials/footer.pug

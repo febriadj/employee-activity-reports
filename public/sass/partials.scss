@@ -1,0 +1,87 @@
+#navbar {
+  width: 100%; display: flex; justify-content: center;
+  background: #fff;
+  z-index: 4;
+  #wrap {
+    width: 1224px; height: 80px; display: flex; justify-content: space-between; align-items: center;
+    margin: 0 20px;
+    .logo { width: 65px; }
+    .path { 
+      a { margin: 0 0 0 20px; font-size: 0.9em; } 
+      .logout {  
+        padding: 10px; background: #006d77; color: #fff;
+      } 
+    }
+  }
+}
+
+#navmob {
+  width: 100%; display: none; justify-content: center;
+  z-index: 4;
+  #wrap {
+    width: 1224px; height: 80px; margin: 0 10px 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    .logo { width: 65px; }
+    .icon { 
+      width: 40px; height: 40px;
+      display: flex; justify-content: center; align-items: center;
+      span {
+        position: absolute;
+        display: block;
+        width: 20px; height: 2px;
+        border-radius: 20px;
+        background: #343a40;
+        transition: 0.1s ease-out;
+      }
+      .strip-1 { transform: translateY(-7px); transition-delay: 0.1s; }
+      .strip-4 { transform: translateY(7px); transition-delay: 0.1s; }
+      .strip-2, .strip-3 { transform: rotate(0); }
+    
+      // dom
+      .strip-1.ex, .strip-4.ex { transform: translateY(0); transition-delay: 0s; opacity: 0; }
+      .strip-2.ex { transform: rotate(45deg); transition-delay: 0.1s; }
+      .strip-3.ex { transform: rotate(-45deg); transition-delay: 0.1s; }
+    }
+  }
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform: translateY(-400px);
+  display: none; justify-content: flex-end;
+  z-index: 4;
+  #wrap {
+    transform: translateY(480px);
+    width: 150px;
+    background: #fff;
+    border: 1px solid #999;
+    margin: 0 30px; padding: 40px;
+    display: flex; flex-direction: column;
+    border-radius: 10px;
+    a { margin: 10px 0; }
+    span { margin: 40px 0 10px 0; display: block; width: 100%; height: 1px; background: #303030; }
+  }
+}
+
+#footer {
+  width: 100%;
+  display: flex; justify-content: center;
+  background: #fff;
+  padding: 40px 0 25px 0;
+  #wrap {
+    width: 1224px; margin: 0 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    .path {
+      display: flex; align-items: center;
+      a { margin: 0 0 0 20px; } }
+  }
+}
+
+@media screen and ( max-width: 600px ) {
+  #navbar { display: none; }
+  #navmob { display: flex; }
+  #menu { display: flex; display: none; }
+  #menu.menu-toggle { display: flex; }
+}
